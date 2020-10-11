@@ -42,14 +42,18 @@ const TodoList = props => {
 
   return (
     <div>
-      <h1>Quais são seus planos para hoje?</h1>
-      <TodoForm onSubmit={addTask} />
-      <Todo
-        tasks={tasks}
-        completeTask={completeTask}
-        removeTask={removeTask}
-        updateTask={updateTask}
-      />
+      <div className="todo-header">
+        <h1>Quais são seus planos para hoje?</h1>
+        <TodoForm onSubmit={addTask} />
+      </div>
+      <div className="todo-items">
+        <Todo
+          tasks={tasks}
+          completeTask={completeTask}
+          removeTask={removeTask}
+          updateTask={updateTask}
+        />
+      </div>
     </div>
   );
 };

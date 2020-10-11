@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
+import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import TodoForm from './TodoForm';
 
 const Todo = ({ tasks, completeTask, removeTask, updateTask }) => {
@@ -26,7 +27,14 @@ const Todo = ({ tasks, completeTask, removeTask, updateTask }) => {
       className={task.isComplete ? 'task-row complete' : 'task-row'}
       key={index}
     >
-      <div key={task.key} onClick={() => completeTask(task.key)}>
+      <div
+        className="icons"
+        key={task.key}
+        onClick={() => completeTask(task.key)}
+      >
+        {task.isComplete ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}
+      </div>
+      <div className="todo-text">
         {task.text}
       </div>
       <div className="icons">
