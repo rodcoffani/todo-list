@@ -31,27 +31,27 @@ const TodoForm = props => {
           <>
             <input
               type="text"
-              placeholder="Update this item"
+              placeholder="Atualize este item"
               value={currentItem}
               name="text"
               className="todo-input edit"
               onChange={handleChange}
               ref={inputRef}
             />
-            <button className="todo-button edit">Update</button>
+            <button className="todo-button edit">Atualizar</button>
           </>
         ) : (
           <>
             <input
               type="text"
-              placeholder="Add a todo"
+              placeholder="Adicione uma tarefa"
               value={currentItem}
               name="text"
               className="todo-input"
               onChange={handleChange}
               ref={inputRef}
             />
-            <button className="todo-button">Add task</button>
+            <button className="todo-button">Adicionar</button>
           </>
         )}
       </form>
